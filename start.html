@@ -46,7 +46,7 @@
       }
 
       .red {background-color: #f44336;;} /* Red */
-      .blue {background-color: #0099CC;;} /* Blue */ 
+      .blue {background-color: #110c71;} /* Blue */ 
       .yellow {background-color: rgba(255,85,51,1);;} /* Yellow */ 
       
       h1 {text-align: center;}
@@ -72,9 +72,9 @@
         var data = new google.visualization.DataTable();
 
         data.addColumn('string', 'Time');
+        data.addColumn('string', 'Terminal');
         data.addColumn('string', 'Flight');
         data.addColumn('string', 'To');
-        data.addColumn('string', 'Schengen');
         //data.addColumn('string', 'DOOP');
         data.addColumn('number', 'Remaining Flights');
         data.addColumn('number', 'Quota');
@@ -89,7 +89,8 @@
           var row = daily_plan_data[i];
             { 
                 data.addRows([[row.Date_Time, 
-                row.Flight, row.DestName,  row.Schengen,
+                row.Terminal,
+                row.Flight, row.DestName,  
                 //row.doop, 
                 Number(row.remaining_flights), 
                 Number(row.Quota), Number(row.Completed), Number(row.Difference), 
@@ -119,10 +120,10 @@
 
         //create fiter
         var options = {
-          'filterColumnLabel': 'Schengen',
+          'filterColumnLabel': 'Terminal',
           "ui": {"label": "", 
                 "labelStacking": 'horizotal',
-                "caption": "Filter by Schengen/Non-Schengen",
+                "caption": "Filter by Terminal",
                 }
         };
         
@@ -204,7 +205,7 @@
   
     <div>
       </br></br></br> </br></br>
-      <button onclick="start_new_interview()" class="button yellow">Start survey</button>
+      <button onclick="start_new_interview()" class="button blue">Start survey</button>
       </br></br>
     </div>
 
