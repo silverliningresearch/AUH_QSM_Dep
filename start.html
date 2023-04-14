@@ -1,6 +1,6 @@
 <html>
     <head>
-		<title>BUD VoP Departures Survey</title>
+		<title>ADAC QSM Departures Survey</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   
 		<script src="data/quota_data.js"></script>
@@ -47,7 +47,7 @@
 
       .red {background-color: #f44336;;} /* Red */
       .blue {background-color: #0099CC;;} /* Blue */ 
-      .yellow {background-color: #da872b;;} /* Yellow */ 
+      .yellow {background-color: rgba(255,85,51,1);;} /* Yellow */ 
       
       h1 {text-align: center;}
     </style>
@@ -155,13 +155,13 @@
         document.getElementById("download_time").innerHTML = "Data updated at: " + download_time;
 
         //overall_arrival_status
-        var overall_arrival_status =  "VoP Arrival: " + "Total quota: " + total_arrival_quota;
+        var overall_arrival_status =  "QSM Arrival: " + "Total quota: " + total_arrival_quota;
         overall_arrival_status += " - Total completed: " + total_arrival_completed;
         overall_arrival_status +=  " (" + total_arrival_completed_percent +  "%)";
         document.getElementById("overall_arrival_status").innerHTML =overall_arrival_status;
 
         //overall_status
-        var overall_status = "VoP Departures: " +  "Total quota: " + total_quota;
+        var overall_status = "QMS Departures: " +  "Total quota: " + total_quota;
         overall_status += " - Total completed: " + total_completed + " (" + total_completed_percent + "%)";
         document.getElementById("overall_status").innerHTML =overall_status;
      }
@@ -190,8 +190,8 @@
     </script>
   </head>
   <body>
-   <h4  style="text-align:center;">BUD VoP Departures Survey</h4>
-  </br>
+   
+  </br></br></br>
 
     <div>
       <input list="flightDropBoxList" 
@@ -209,7 +209,7 @@
     </div>
 
     
-    <div style="background-color:#efcb65">
+    <div style="background-color:#065c7c">
       </br>
     </div>
     <h5 id="download_time"></h5>
