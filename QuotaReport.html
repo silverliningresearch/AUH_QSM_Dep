@@ -29,7 +29,7 @@
         var data = new google.visualization.DataTable();
 
         //define header
-        data.addColumn('string', 'Airport_Airline');
+        data.addColumn('string', 'Dest');
         data.addColumn('number', 'Quota');
         data.addColumn('number', 'Completed');
 				data.addColumn('number', 'Missing');
@@ -40,7 +40,7 @@
           var row = quota_data[i];
           data.addRows([
           [
-            row.Airport_Airline, 
+            row.Dest, 
             Number(row.Quota),
             Number(row.Completed), 
             Number(row.Difference), 
@@ -58,7 +58,7 @@
           'controlType': 'CategoryFilter',
           'containerId': 'filter_div',
           'options': {
-            'filterColumnLabel': 'Airport_Airline'
+            'filterColumnLabel': 'Dest'
           }
         });
   

@@ -95,7 +95,7 @@ function isvalid_id(id)
 }
 
 function prepareInterviewData() {
-  quota_data = JSON.parse(airport_airline_quota);
+  quota_data = JSON.parse(target_quota);
   removed_ids_data = JSON.parse(removed_ids);
 
   var interview_data_full  = JSON.parse(interview_data_raw);
@@ -126,9 +126,9 @@ function prepareInterviewData() {
         var airline_code = ""
         if (interview["AirlineCode"])  airline_code = interview["AirlineCode"];
 
-        var airport_airline = '"Airport_Airline"' + ":" + '"' +  airport_code + "-" + airline_code + '", ';
+        var Dest = '"Dest"' + ":" + '"' +  airport_code + '", ';
         var InterviewEndDate = '"InterviewEndDate"' + ":" + '"' +  interview["InterviewEndDate"] ;
-        var str = '{' + airport_airline + InterviewEndDate + '"}';
+        var str = '{' + Dest + InterviewEndDate + '"}';
 
         if (isvalid_id(interview["InterviewId"])) //check if valid
         {
@@ -156,10 +156,6 @@ function prepareInterviewData() {
   for (i = 0; i < flight_list_full.length; i++) {
     let flight = flight_list_full[i];
 
-    //airport_airline
-    var airport_airline = flight.Dest + "-" + flight.AirlineCode; //code for compare
-    flight.Airport_Airline = airport_airline;
-
     //only get today & not departed flight
     if (((currentDate ==flight.Date) && notDeparted(flight.Time))
         //|| (nextDate ==flight.Date)
@@ -185,7 +181,7 @@ function prepareInterviewData() {
     let flight = today_flight_list[i];
     for (j = 0; j < quota_data.length; j++) {
       let quota = quota_data[j];
-      if ((quota.Airport_Airline == flight.Airport_Airline) && (quota.Quota>0))
+      if ((quota.Dest == flight.Dest) && (quota.Quota>0))
       {
         flight.Quota = quota.Quota;
         daily_plan_data.push(flight);

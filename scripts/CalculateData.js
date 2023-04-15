@@ -18,7 +18,7 @@ function CalculateAirportAirLineReport() {
     found_temp = 0;
     for (j = 0; j < quota_data.length; j++) 
     {
-      if (quota_data[j].Airport_Airline.toUpperCase() == interview_data[i].Airport_Airline.toUpperCase()) 
+      if (quota_data[j].Dest.toUpperCase() == interview_data[i].Dest.toUpperCase()) 
       { 
         found_temp = 1;
       }
@@ -29,13 +29,13 @@ function CalculateAirportAirLineReport() {
 
 
   total_quota = 0;
-  for (i = 0; i < quota_data.length; i++) {//airport_airline_report.length;
+  for (i = 0; i < quota_data.length; i++) {
     row = quota_data[i];
     row.Completed = 0;
 
     total_quota = total_quota + parseInt(row.Quota);
     for (j = 0; j < interview_data.length; j++) {
-      if (row.Airport_Airline.toUpperCase() == interview_data[j].Airport_Airline.toUpperCase()) 
+      if (row.Dest.toUpperCase() == interview_data[j].Dest.toUpperCase()) 
       { 
         row.Completed++;
       }
@@ -60,10 +60,10 @@ function CalculateAirportAirLineReport() {
 
   }
 
-  for (i = 0; i < daily_plan_data.length; i++) {//airport_airline_report.length;
+  for (i = 0; i < daily_plan_data.length; i++) {
     row = daily_plan_data[i];
     for (j = 0; j < quota_data.length; j++) {
-      if (row.Airport_Airline.toUpperCase() == quota_data[j].Airport_Airline.toUpperCase()) 
+      if (row.Dest.toUpperCase() == quota_data[j].Dest.toUpperCase()) 
       {
         if ( quota_data[j].Difference < 0) {
           row.Completed = quota_data[j].Completed;
