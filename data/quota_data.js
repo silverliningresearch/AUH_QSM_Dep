@@ -1,128 +1,513 @@
-    let target_quota = `
-    [
-        {"Dest": "BOM", "Quota": "30"},
-{"Dest": "DEL", "Quota": "30"},
-{"Dest": "MLE", "Quota": "30"},
-{"Dest": "AMD", "Quota": "30"},
-{"Dest": "IST", "Quota": "30"},
-{"Dest": "COK", "Quota": "30"},
-{"Dest": "PEW", "Quota": "30"},
-{"Dest": "JED", "Quota": "30"},
-{"Dest": "CCJ", "Quota": "30"},
-{"Dest": "DOH", "Quota": "30"},
-{"Dest": "BAH", "Quota": "30"},
-{"Dest": "MCT", "Quota": "30"},
-{"Dest": "MAN", "Quota": "30"},
-{"Dest": "FRA", "Quota": "30"},
-{"Dest": "LHR", "Quota": "30"},
-{"Dest": "RUH", "Quota": "30"},
-{"Dest": "CDG", "Quota": "30"},
-{"Dest": "MAD", "Quota": "30"},
-{"Dest": "MAA", "Quota": "30"},
-{"Dest": "MUC", "Quota": "30"},
-{"Dest": "KWI", "Quota": "30"},
-{"Dest": "CAI", "Quota": "30"},
-{"Dest": "ORD", "Quota": "30"},
-{"Dest": "DAC", "Quota": "30"},
-{"Dest": "GVA", "Quota": "30"},
-{"Dest": "MNL", "Quota": "30"},
-{"Dest": "DMM", "Quota": "30"},
-{"Dest": "DUB", "Quota": "30"},
-{"Dest": "VIE", "Quota": "30"},
-{"Dest": "FCO", "Quota": "30"},
-{"Dest": "CGK", "Quota": "30"},
-{"Dest": "BRU", "Quota": "30"},
-{"Dest": "BCN", "Quota": "30"},
-{"Dest": "JFK", "Quota": "30"},
-{"Dest": "LHE", "Quota": "30"},
-{"Dest": "ZRH", "Quota": "30"},
-{"Dest": "MXP", "Quota": "30"},
-{"Dest": "SVO", "Quota": "30"},
-{"Dest": "KUT", "Quota": "30"},
-{"Dest": "EVN", "Quota": "30"},
-{"Dest": "SKD", "Quota": "30"},
-{"Dest": "HBE", "Quota": "30"},
-{"Dest": "GYD", "Quota": "30"},
-{"Dest": "MUX", "Quota": "30"},
-{"Dest": "AMM", "Quota": "30"},
-{"Dest": "MED", "Quota": "30"},
-{"Dest": "TLV", "Quota": "30"},
-{"Dest": "YYZ", "Quota": "30"},
-{"Dest": "KTM", "Quota": "30"},
-{"Dest": "ATH", "Quota": "30"},
-{"Dest": "BEY", "Quota": "30"},
-{"Dest": "AMS", "Quota": "30"},
-{"Dest": "IAD", "Quota": "30"},
-{"Dest": "BKK", "Quota": "30"},
-{"Dest": "SYD", "Quota": "30"},
-{"Dest": "CNN", "Quota": "30"},
-{"Dest": "TRV", "Quota": "30"},
-{"Dest": "BEG", "Quota": "30"},
-{"Dest": "SJJ", "Quota": "30"},
-{"Dest": "BLR", "Quota": "30"},
-{"Dest": "HYD", "Quota": "30"},
-{"Dest": "ISB", "Quota": "30"},
-{"Dest": "CMB", "Quota": "30"},
-{"Dest": "KHI", "Quota": "30"},
-{"Dest": "CCU", "Quota": "30"},
-{"Dest": "ALA", "Quota": "30"},
-{"Dest": "ESB", "Quota": "30"},
-{"Dest": "KRT", "Quota": "30"},
-{"Dest": "NAP", "Quota": "30"},
-{"Dest": "CTA", "Quota": "30"},
-{"Dest": "DME", "Quota": "30"},
-{"Dest": "SOF", "Quota": "30"},
-{"Dest": "SLL", "Quota": "30"},
-{"Dest": "NRT", "Quota": "30"},
-{"Dest": "ICN", "Quota": "30"},
-{"Dest": "SIN", "Quota": "30"},
-{"Dest": "MEL", "Quota": "30"},
-{"Dest": "KUL", "Quota": "30"},
-{"Dest": "HKG", "Quota": "30"},
-{"Dest": "PVG", "Quota": "30"},
-{"Dest": "HAN", "Quota": "30"},
-{"Dest": "IXE", "Quota": "30"},
-{"Dest": "SEZ", "Quota": "30"},
-{"Dest": "JNB", "Quota": "30"},
-{"Dest": "CMN", "Quota": "30"},
-{"Dest": "SKT", "Quota": "30"},
-{"Dest": "KBL", "Quota": "30"},
-{"Dest": "SAW", "Quota": "30"},
-{"Dest": "LYP", "Quota": "30"},
-{"Dest": "TAS", "Quota": "30"},
-{"Dest": "TBS", "Quota": "30"},
-{"Dest": "DUS", "Quota": "30"},
-{"Dest": "TIA", "Quota": "30"},
-{"Dest": "TRZ", "Quota": "30"},
-{"Dest": "NQZ", "Quota": "30"},
-{"Dest": "CLJ", "Quota": "30"},
-{"Dest": "OTP", "Quota": "30"},
-{"Dest": "KTW", "Quota": "30"},
-{"Dest": "BUD", "Quota": "30"},
-{"Dest": "DAM", "Quota": "30"},
-{"Dest": "AQJ", "Quota": "30"},
-{"Dest": "KZN", "Quota": "30"},
-{"Dest": "KRK", "Quota": "30"},
-{"Dest": "CAN", "Quota": "30"},
-{"Dest": "RKT", "Quota": "30"},
-{"Dest": "NBO", "Quota": "30"},
-{"Dest": "HMB", "Quota": "30"},
-{"Dest": "CGP", "Quota": "30"},
-{"Dest": "PKX", "Quota": "30"},
-{"Dest": "SCT", "Quota": "30"},
-{"Dest": "SHJ", "Quota": "30"},
-{"Dest": "WUH", "Quota": "30"},
-{"Dest": "AUH", "Quota": "30"},
-{"Dest": "CSX", "Quota": "30"},
-{"Dest": "MST", "Quota": "30"},
-{"Dest": "HGH", "Quota": "30"},
-{"Dest": "LGG", "Quota": "30"},
-{"Dest": "SGN", "Quota": "30"}
+     let target_quota = ` 
+[
+    {
+        "Terminal_Dest": "T1-ALA",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-AMD",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-AMM",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T1-AQJ",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-ATH",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-BAH",
+        "Quota": 9
+    },
+    {
+        "Terminal_Dest": "T1-BEG",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-BEY",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T1-BOM",
+        "Quota": 10
+    },
+    {
+        "Terminal_Dest": "T1-BUD",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-CAI",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T1-CCJ",
+        "Quota": 5
+    },
+    {
+        "Terminal_Dest": "T1-CCU",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-CGP",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-CMB",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-CNN",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-COK",
+        "Quota": 7
+    },
+    {
+        "Terminal_Dest": "T1-CSX",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-CTA",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-DAC",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-DAM",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-DEL",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-DME",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-DMM",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-DOH",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T1-ESB",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-EVN",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-FCO",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-GYD",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-HBE",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-HMB",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-HYD",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-IST",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T1-IXE",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-JED",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-KRK",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-KRT",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-KTM",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-KTW",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-KUT",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-KWI",
+        "Quota": 5
+    },
+    {
+        "Terminal_Dest": "T1-KZN",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-LYP",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-MAA",
+        "Quota": 5
+    },
+    {
+        "Terminal_Dest": "T1-MCT",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-MED",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-MLE",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-MUX",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-NAP",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-NQZ",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-OTP",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-RUH",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-SAW",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-SJJ",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-SKD",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-SLL",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T1-SOF",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-TAS",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-TBS",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-TIA",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T1-TLV",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T1-TRV",
+        "Quota": 7
+    },
+    {
+        "Terminal_Dest": "T1-VIE",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T3-AMD",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T3-AMM",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-AMS",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-ATH",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-AUH",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T3-BAH",
+        "Quota": 9
+    },
+    {
+        "Terminal_Dest": "T3-BCN",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-BEY",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-BKK",
+        "Quota": 11
+    },
+    {
+        "Terminal_Dest": "T3-BLR",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T3-BOM",
+        "Quota": 9
+    },
+    {
+        "Terminal_Dest": "T3-BRU",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T3-CAI",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T3-CAN",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T3-CCU",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-CDG",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-CGK",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-CMB",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T3-CMN",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T3-COK",
+        "Quota": 7
+    },
+    {
+        "Terminal_Dest": "T3-DAC",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-DEL",
+        "Quota": 9
+    },
+    {
+        "Terminal_Dest": "T3-DMM",
+        "Quota": 11
+    },
+    {
+        "Terminal_Dest": "T3-DOH",
+        "Quota": 10
+    },
+    {
+        "Terminal_Dest": "T3-DUB",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-FCO",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-FRA",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-GVA",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T3-HYD",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T3-IAD",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-ICN",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-ISB",
+        "Quota": 7
+    },
+    {
+        "Terminal_Dest": "T3-IST",
+        "Quota": 6
+    },
+    {
+        "Terminal_Dest": "T3-JED",
+        "Quota": 10
+    },
+    {
+        "Terminal_Dest": "T3-JFK",
+        "Quota": 7
+    },
+    {
+        "Terminal_Dest": "T3-JNB",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T3-KHI",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T3-KUL",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-KWI",
+        "Quota": 10
+    },
+    {
+        "Terminal_Dest": "T3-LHE",
+        "Quota": 6
+    },
+    {
+        "Terminal_Dest": "T3-LHR",
+        "Quota": 16
+    },
+    {
+        "Terminal_Dest": "T3-MAA",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T3-MAD",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-MAN",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-MCT",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T3-MEL",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-MLE",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-MNL",
+        "Quota": 8
+    },
+    {
+        "Terminal_Dest": "T3-MUC",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-MXP",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-NRT",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-ORD",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-PKX",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T3-PVG",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T3-RKT",
+        "Quota": 1
+    },
+    {
+        "Terminal_Dest": "T3-RUH",
+        "Quota": 12
+    },
+    {
+        "Terminal_Dest": "T3-SEZ",
+        "Quota": 2
+    },
+    {
+        "Terminal_Dest": "T3-SIN",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-SVO",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-SYD",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-TLV",
+        "Quota": 4
+    },
+    {
+        "Terminal_Dest": "T3-VIE",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T3-YYZ",
+        "Quota": 3
+    },
+    {
+        "Terminal_Dest": "T3-ZRH",
+        "Quota": 4
+    }
+]    
 
-  
-        
-        
-]
-            
-     
-    `;
+ `;

@@ -18,6 +18,11 @@ var total_quota_completed;
 var total_hard_quota;
 var total_quota;
 
+var T1_quota;
+var T1_completed;
+var T3_quota;
+var T3_completed;
+
 /************************************/
 function initCurrentTimeVars() {
   var today = new Date();
@@ -99,7 +104,7 @@ function prepareInterviewData() {
   removed_ids_data = JSON.parse(removed_ids);
 
   var interview_data_full  = JSON.parse(interview_data_raw);
-  var flight_list_full  = JSON.parse(BUD_Flight_List_Raw);
+  var flight_list_full  = JSON.parse(AUH_Flight_List_Raw);
 
   initCurrentTimeVars();						
   //get relevant interview data
@@ -111,24 +116,21 @@ function prepareInterviewData() {
   for (i = 0; i < interview_data_full.length; i++) {
     var interview = interview_data_full[i];
 
-
     var interview_month = interview["InterviewEndDate"].substring(5,7);//"2023-04-03 06:18:18"
     var interview_quarter = getQuarterFromMonth(interview_month);
     
     if ((interview.InterviewState == "Complete") 
-      //&& (currentMonth == interview_month)  
-      && (currentQuarter == interview_quarter)  
+      && (currentMonth == interview_month)  
+      //&& (currentQuarter == interview_quarter)  
       )
     {
       if (interview["Dest"]) {
         var airport_code = interview["Dest"];
-        
-        var airline_code = ""
-        if (interview["AirlineCode"])  airline_code = interview["AirlineCode"];
 
-        var Dest = '"Dest"' + ":" + '"' +  airport_code + '", ';
+        var terminal = "T" + interview["Terminal"];
+        var Terminal_Dest = '"Terminal_Dest"' + ":" + '"' + terminal +"-" + airport_code + '", ';
         var InterviewEndDate = '"InterviewEndDate"' + ":" + '"' +  interview["InterviewEndDate"] ;
-        var str = '{' + Dest + InterviewEndDate + '"}';
+        var str = '{' + Terminal_Dest + InterviewEndDate + '"}';
 
         if (isvalid_id(interview["InterviewId"])) //check if valid
         {
@@ -181,7 +183,7 @@ function prepareInterviewData() {
     let flight = today_flight_list[i];
     for (j = 0; j < quota_data.length; j++) {
       let quota = quota_data[j];
-      if ((quota.Dest == flight.Dest) && (quota.Quota>0))
+      if ((quota.Terminal_Dest == flight.Terminal_Dest) && (quota.Quota>0))
       {
         flight.Quota = quota.Quota;
         daily_plan_data.push(flight);
