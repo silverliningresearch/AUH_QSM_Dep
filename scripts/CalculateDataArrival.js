@@ -2,6 +2,11 @@ var total_arrival_quota = 250;
 var total_arrival_completed;
 var total_arrival_completed_percent;
 
+var T1_quota_arr = 83;
+var T1_completed_arr;
+var T3_quota_arr = 167;
+var T3_completed_arr;
+
 /************************************/
 function CalculateArrival() {
   var interview_data_temp  = JSON.parse(interview_data_arr_raw);

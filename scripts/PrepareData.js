@@ -16,11 +16,11 @@ var total_completed;
 var total_completed_percent;
 var total_quota_completed;
 var total_hard_quota;
-var total_quota;
+var total_quota = 500;
 
-var T1_quota;
+var T1_quota = 167;
 var T1_completed;
-var T3_quota;
+var T3_quota = 333;
 var T3_completed;
 
 /************************************/
@@ -127,7 +127,7 @@ function prepareInterviewData() {
       if (interview["Dest"]) {
         var airport_code = interview["Dest"];
 
-        var terminal = "T" + interview["Terminal"];
+        var terminal =  interview["Terminal"];
         var Terminal_Dest = '"Terminal_Dest"' + ":" + '"' + terminal +"-" + airport_code + '", ';
         var InterviewEndDate = '"InterviewEndDate"' + ":" + '"' +  interview["InterviewEndDate"] ;
         var str = '{' + Terminal_Dest + InterviewEndDate + '"}';
