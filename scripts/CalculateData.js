@@ -8,7 +8,8 @@ function CalculateAirportAirLineReport() {
   
   total_completed = 0;
   total_quota_completed = 0;
-
+  T1_completed = 0;
+  T3_completed = 0;
   //check what not belong to quota data
   var found_temp = 0;
   var not_in_quota_list =[];
@@ -24,6 +25,14 @@ function CalculateAirportAirLineReport() {
       }
     }
     if (found_temp==0) not_in_quota_list.push(interview_data[i]);
+    
+    if (interview_data[i].Terminal == "T1") {
+      T1_completed++;
+    }
+    else if (interview_data[i].Terminal == "T3")
+    {
+      T3_completed++;
+    }
   }
   console.log("not_in_quota_list: ", not_in_quota_list);
 

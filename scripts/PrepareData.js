@@ -125,12 +125,11 @@ function prepareInterviewData() {
       )
     {
       if (interview["Dest"]) {
-        var airport_code = interview["Dest"];
 
-        var terminal =  interview["Terminal"];
-        var Terminal_Dest = '"Terminal_Dest"' + ":" + '"' + terminal +"-" + airport_code + '", ';
-        var InterviewEndDate = '"InterviewEndDate"' + ":" + '"' +  interview["InterviewEndDate"] ;
-        var str = '{' + Terminal_Dest + InterviewEndDate + '"}';
+        var Terminal_Dest = '"Terminal_Dest"' + ":" + '"' + interview["Terminal"] +"-" + interview["Dest"] + '", ';
+        var InterviewEndDate = '"InterviewEndDate"' + ":" + '"' +  interview["InterviewEndDate"]  + '", ';
+        var Terminal = '"Terminal"' + ":" + '"' +  interview["Terminal"] ;
+        var str = '{' + Terminal_Dest + InterviewEndDate + Terminal +'"}';
 
         if (isvalid_id(interview["InterviewId"])) //check if valid
         {

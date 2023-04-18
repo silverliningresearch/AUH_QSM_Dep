@@ -9,7 +9,7 @@
     <script src="scripts/PrepareData.js"></script>
 		<script src="scripts/CalculateData.js"></script>
     <script src="scripts/CalculateDataArrival.js"></script>
-    
+
     <script type="text/javascript" src="https://silverliningresearch.github.io/daily_plan_data_alc/AUH_QSM_Dep/data/interview_data.js"></script> 
     <script type="text/javascript" src="https://silverliningresearch.github.io/daily_plan_data_alc/AUH_QSM_Dep/data/interview_data_arr.js"></script> 
     
@@ -91,12 +91,22 @@
         var overall_arrival_status =  "QSM Arrival: " + "Total quota: " + total_arrival_quota;
         overall_arrival_status += " - Total completed: " + total_arrival_completed;
         overall_arrival_status +=  " (" + total_arrival_completed_percent +  "%)";
+        overall_arrival_status += "; Terminal 1: " + T1_completed_arr + "/83 - Terminal 3: " + T3_completed_arr + "/167";
         document.getElementById("overall_arrival_status").innerHTML =overall_arrival_status;
+
+        //var terminal_arrival_status = "Terminal 1: " + T1_completed_arr + " - Terminal 3: " + T3_completed_arr;
+        //document.getElementById("terminal_arrival_status").innerHTML =terminal_arrival_status;
 
         //overall_status
         var overall_status = "QMS Departures: " +  "Total quota: " + total_quota;
-        overall_status += " - Total completed: " + total_completed + " (" + total_completed_percent + "%)";
-        document.getElementById("overall_status").innerHTML =overall_status;      }
+        overall_status += " - Total completed: " + total_completed;
+        overall_status += " (" + total_completed_percent + "%)";
+        overall_status += "; Terminal 1: " + T1_completed + "/167 - Terminal 3: " + T3_completed + "/333";
+        document.getElementById("overall_status").innerHTML =overall_status;
+
+        //var terminal_status = "Terminal 1: " + T1_completed + " - Terminal 3: " + T3_completed;
+        //document.getElementById("terminal_status").innerHTML =terminal_status;
+      }
     </script>
   </head>
   <body>
@@ -104,7 +114,10 @@
     
     <h5 id="download_time"></h5>
     <h4 id="overall_arrival_status"></h4>
+    <!-- <h5 id="terminal_arrival_status"></h4> -->
+
     <h4 id="overall_status"></h4>
+    <!-- <h5 id="terminal_status"></h4> -->
 
     <div id="dashboard_div">
       <!--Divs that will hold each control and chart-->
