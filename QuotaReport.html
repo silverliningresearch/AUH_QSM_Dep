@@ -33,7 +33,8 @@
 
         var data = new google.visualization.DataTable();
         //define header
-        data.addColumn('string', 'Terminal - Destination');
+        data.addColumn('string', 'Terminal');
+        data.addColumn('string', 'Dest');
         data.addColumn('number', 'Quota');
         data.addColumn('number', 'Completed');
 				data.addColumn('number', 'Missing');
@@ -44,7 +45,8 @@
           var row = quota_data[i];
           data.addRows([
           [
-            row.Terminal_Dest, 
+            row.Terminal, 
+            row.Dest, 
             Number(row.Quota),
             Number(row.Completed), 
             Number(row.Difference), 
@@ -56,14 +58,19 @@
         //create a dashboard.
         var dashboard = new google.visualization.Dashboard(
         document.getElementById('dashboard_div'));
-
         //create fiter
+        var options = {
+          'filterColumnLabel': 'Terminal',
+          "ui": {"label": "", 
+                "labelStacking": 'horizotal',
+                "caption": "Filter by Terminal",
+                }
+        };
+        
         var tableFilter = new google.visualization.ControlWrapper({
           'controlType': 'CategoryFilter',
           'containerId': 'filter_div',
-          'options': {
-            'filterColumnLabel': 'Terminal - Destination'
-          }
+          'options': options
         });
   
         // Create table
@@ -81,7 +88,7 @@
         dashboard.bind(tableFilter, tableChart);
 
         var view = new google.visualization.DataView(data);
-        document.getElementById("filter_div").style.display = "none";
+        //document.getElementById("filter_div").style.display = "none";
         dashboard.draw(view);
 
         //Update time info
@@ -122,6 +129,7 @@
     <div id="dashboard_div">
       <!--Divs that will hold each control and chart-->
       <div id="filter_div"></div>
+    </br>
       <div id="table_div"></div>
     </div>
 
