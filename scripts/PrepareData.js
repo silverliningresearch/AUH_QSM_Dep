@@ -34,22 +34,35 @@ function initCurrentTimeVars() {
   if (month.length < 2) month = '0' + month;
   if (day.length < 2) day = '0' + day;
 
-  currentDate = [day, month, year].join('-');
-  currentMonth = month; //[month, year].join('-');;
-  currentQuarter = getQuarterFromMonth(currentMonth);
+  currentMonth =[month,year].join('-')
+  currentDate = [day, month,year].join('-');
+  //return [day, month,year].join('-');
+  if (document.getElementById('year_month') && document.getElementById('year_month').value.length > 0)
+  {
+    if (document.getElementById('year_month').value != "current-month")
+    {
+      currentMonth = document.getElementById('year_month').value;
+    }
+  }
+  console.log("currentMonth: ", currentMonth);
+}
 
-  //////////
-  var tomorrow = new Date();
-  tomorrow.setDate(today.getDate()+1);
-  var tomorrowMonth = '' + (tomorrow.getMonth() + 1); //month start from 0;
-  var tomorrowDay = '' + tomorrow.getDate();
-  var tomorrowYear = tomorrow.getFullYear();
+function isCurrentMonth(interviewEndDate)
+{
+// Input: "2023-04-03 10:06:22 GMT"
+  var interviewDateParsed = interviewEndDate.split("-")
 
-  if (tomorrowMonth.length < 2) tomorrowMonth = '0' + tomorrowMonth;
-  if (tomorrowDay.length < 2) tomorrowDay = '0' + tomorrowDay;
+  var interviewYear = (interviewDateParsed[0]);
+  var interviewMonth =(interviewDateParsed[1]);
+  
+  var result = false;
 
-  nextDate  = [tomorrowDay, tomorrowMonth, tomorrowYear].join('-');
-  //////////
+  if ( currentMonth ==[interviewMonth,interviewYear].join('-'))
+  {
+    result = true;
+  }
+
+   return result;
 }
 
 function getQuarterFromMonth(month)
@@ -100,13 +113,25 @@ function isvalid_id(id)
 }
 
 function prepareInterviewData() {
-  quota_data = JSON.parse(target_quota);
+  var quota_data_temp = JSON.parse(target_quota);
   removed_ids_data = JSON.parse(removed_ids);
 
   var interview_data_full  = JSON.parse(interview_data_raw);
   var flight_list_full  = JSON.parse(AUH_Flight_List_Raw);
 
-  initCurrentTimeVars();						
+  initCurrentTimeVars();					
+  
+   //get quota data
+   quota_data = [];
+   quota_data.length = 0;
+   for (i = 0; i < quota_data_temp.length; i++) {
+     var quota_month =  quota_data_temp[i].Month + "-"  + quota_data_temp[i].Year; 
+     if ((quota_month== currentMonth) && (quota_data_temp[i].Quota>0))
+     {
+       quota_data.push(quota_data_temp[i]);
+     }
+   }
+
   //get relevant interview data
   //empty the list
   interview_data = [];
@@ -117,10 +142,9 @@ function prepareInterviewData() {
     var interview = interview_data_full[i];
 
     var interview_month = interview["InterviewEndDate"].substring(5,7);//"2023-04-03 06:18:18"
-    var interview_quarter = getQuarterFromMonth(interview_month);
     
     if ((interview.InterviewState == "Complete") 
-      && (currentMonth == interview_month)  
+        && (isCurrentMonth(interview.InterviewEndDate))
       //&& (currentQuarter == interview_quarter)  
       )
     {
@@ -189,8 +213,8 @@ function prepareInterviewData() {
        }
     }
   }
-  console.log("today_flight_list: ", today_flight_list);
-  console.log("quota_data: ", quota_data);
-  console.log("daily_plan_data: ", daily_plan_data);
-  console.log("interview_data: ", interview_data);
+  // console.log("today_flight_list: ", today_flight_list);
+  // console.log("quota_data: ", quota_data);
+  // console.log("daily_plan_data: ", daily_plan_data);
+  // console.log("interview_data: ", interview_data);
 }

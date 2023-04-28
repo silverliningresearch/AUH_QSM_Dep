@@ -18,21 +18,19 @@ function CalculateArrival() {
   for (i = 0; i < interview_data_temp.length; i++) {
     var interview = interview_data_temp[i];
     var interview_month = interview["InterviewEndDate"].substring(5,7);//"2023-04-03 06:18:18"
-    var interview_quarter = getQuarterFromMonth(interview_month);
     //only get complete interview & not test
-    if ((interview.InterviewState == "Complete")
-    && (currentMonth == interview_month) 
+    if ((interview.InterviewState == "Complete") 
+        && (isCurrentMonth(interview.InterviewEndDate))
       )
     {
       total_arrival_completed++;
-    }
-
-    if (interview.Terminal == "T1") {
-      T1_completed_arr++;
-    }
-    else if (interview.Terminal == "T3")
-    {
-      T3_completed_arr++;
+      if (interview.Terminal == "T1") {
+        T1_completed_arr++;
+      }
+      else if (interview.Terminal == "T3")
+      {
+        T3_completed_arr++;
+      }
     }
   }
   total_arrival_completed_percent = (100*(total_arrival_completed/total_arrival_quota)).toFixed(0);   
