@@ -193,9 +193,9 @@ function prepareInterviewData() {
     
     //currentMonth: 02-2023
     //flight.Date: 08-02-2023
-    if (currentQuarter ==  getQuarterFromMonth(flight.Date.substring(3,5))) { 
+    if (currentMonth == flight.Date.substring(3,10)) { 
       this_month_flight_list.push(flight);
-    }		   
+    }	
   }
  
   //add quota data
@@ -213,8 +213,10 @@ function prepareInterviewData() {
        }
     }
   }
-  // console.log("today_flight_list: ", today_flight_list);
-  // console.log("quota_data: ", quota_data);
-  // console.log("daily_plan_data: ", daily_plan_data);
-  // console.log("interview_data: ", interview_data);
+  console.log("today_flight_list: ", today_flight_list);
+  console.log("quota_data: ", quota_data);
+  console.log("daily_plan_data: ", daily_plan_data);
+  console.log("interview_data: ", interview_data);
+  console.log("this_month_flight_list: ", this_month_flight_list);
+  
 }
