@@ -3,42 +3,10 @@
  {
         "Year": "2023",
         "Month": "05",
-        "Terminal_Dest": "T1-ALA",
-        "Terminal": "T1",
-        "Dest": "ALA",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-AMD",
-        "Terminal": "T1",
-        "Dest": "AMD",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
         "Terminal_Dest": "T1-AMM",
         "Terminal": "T1",
         "Dest": "AMM",
-        "Quota": 5
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-AQJ",
-        "Terminal": "T1",
-        "Dest": "AQJ",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-ATH",
-        "Terminal": "T1",
-        "Dest": "ATH",
-        "Quota": 0
+        "Quota": 7
     },
     {
         "Year": "2023",
@@ -46,15 +14,7 @@
         "Terminal_Dest": "T1-BAH",
         "Terminal": "T1",
         "Dest": "BAH",
-        "Quota": 10
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-BEG",
-        "Terminal": "T1",
-        "Dest": "BEG",
-        "Quota": 2
+        "Quota": 14
     },
     {
         "Year": "2023",
@@ -62,7 +22,7 @@
         "Terminal_Dest": "T1-BEY",
         "Terminal": "T1",
         "Dest": "BEY",
-        "Quota": 5
+        "Quota": 7
     },
     {
         "Year": "2023",
@@ -70,15 +30,7 @@
         "Terminal_Dest": "T1-BOM",
         "Terminal": "T1",
         "Dest": "BOM",
-        "Quota": 12
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-BUD",
-        "Terminal": "T1",
-        "Dest": "BUD",
-        "Quota": 0
+        "Quota": 17
     },
     {
         "Year": "2023",
@@ -86,7 +38,7 @@
         "Terminal_Dest": "T1-CAI",
         "Terminal": "T1",
         "Dest": "CAI",
-        "Quota": 11
+        "Quota": 15
     },
     {
         "Year": "2023",
@@ -94,47 +46,7 @@
         "Terminal_Dest": "T1-CCJ",
         "Terminal": "T1",
         "Dest": "CCJ",
-        "Quota": 7
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-CCU",
-        "Terminal": "T1",
-        "Dest": "CCU",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-CGP",
-        "Terminal": "T1",
-        "Dest": "CGP",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-CLJ",
-        "Terminal": "T1",
-        "Dest": "CLJ",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-CMB",
-        "Terminal": "T1",
-        "Dest": "CMB",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-CNN",
-        "Terminal": "T1",
-        "Dest": "CNN",
-        "Quota": 2
+        "Quota": 10
     },
     {
         "Year": "2023",
@@ -142,63 +54,7 @@
         "Terminal_Dest": "T1-COK",
         "Terminal": "T1",
         "Dest": "COK",
-        "Quota": 12
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-CSX",
-        "Terminal": "T1",
-        "Dest": "CSX",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-CTA",
-        "Terminal": "T1",
-        "Dest": "CTA",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-DAC",
-        "Terminal": "T1",
-        "Dest": "DAC",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-DAM",
-        "Terminal": "T1",
-        "Dest": "DAM",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-DEL",
-        "Terminal": "T1",
-        "Dest": "DEL",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-DME",
-        "Terminal": "T1",
-        "Dest": "DME",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-DMM",
-        "Terminal": "T1",
-        "Dest": "DMM",
-        "Quota": 2
+        "Quota": 17
     },
     {
         "Year": "2023",
@@ -206,39 +62,7 @@
         "Terminal_Dest": "T1-DOH",
         "Terminal": "T1",
         "Dest": "DOH",
-        "Quota": 15
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-ESB",
-        "Terminal": "T1",
-        "Dest": "ESB",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-EVN",
-        "Terminal": "T1",
-        "Dest": "EVN",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-FCO",
-        "Terminal": "T1",
-        "Dest": "FCO",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-GYD",
-        "Terminal": "T1",
-        "Dest": "GYD",
-        "Quota": 2
+        "Quota": 20
     },
     {
         "Year": "2023",
@@ -246,23 +70,7 @@
         "Terminal_Dest": "T1-HBE",
         "Terminal": "T1",
         "Dest": "HBE",
-        "Quota": 4
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-HMB",
-        "Terminal": "T1",
-        "Dest": "HMB",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-HYD",
-        "Terminal": "T1",
-        "Dest": "HYD",
-        "Quota": 2
+        "Quota": 5
     },
     {
         "Year": "2023",
@@ -270,63 +78,7 @@
         "Terminal_Dest": "T1-IST",
         "Terminal": "T1",
         "Dest": "IST",
-        "Quota": 4
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-IXE",
-        "Terminal": "T1",
-        "Dest": "IXE",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-JED",
-        "Terminal": "T1",
-        "Dest": "JED",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-KRK",
-        "Terminal": "T1",
-        "Dest": "KRK",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-KRT",
-        "Terminal": "T1",
-        "Dest": "KRT",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-KTM",
-        "Terminal": "T1",
-        "Dest": "KTM",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-KTW",
-        "Terminal": "T1",
-        "Dest": "KTW",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-KUT",
-        "Terminal": "T1",
-        "Dest": "KUT",
-        "Quota": 2
+        "Quota": 5
     },
     {
         "Year": "2023",
@@ -334,23 +86,7 @@
         "Terminal_Dest": "T1-KWI",
         "Terminal": "T1",
         "Dest": "KWI",
-        "Quota": 6
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-KZN",
-        "Terminal": "T1",
-        "Dest": "KZN",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-LYP",
-        "Terminal": "T1",
-        "Dest": "LYP",
-        "Quota": 0
+        "Quota": 9
     },
     {
         "Year": "2023",
@@ -358,15 +94,7 @@
         "Terminal_Dest": "T1-MAA",
         "Terminal": "T1",
         "Dest": "MAA",
-        "Quota": 6
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-MAN",
-        "Terminal": "T1",
-        "Dest": "MAN",
-        "Quota": 0
+        "Quota": 9
     },
     {
         "Year": "2023",
@@ -374,63 +102,7 @@
         "Terminal_Dest": "T1-MCT",
         "Terminal": "T1",
         "Dest": "MCT",
-        "Quota": 4
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-MED",
-        "Terminal": "T1",
-        "Dest": "MED",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-MLE",
-        "Terminal": "T1",
-        "Dest": "MLE",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-MUX",
-        "Terminal": "T1",
-        "Dest": "MUX",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-NAP",
-        "Terminal": "T1",
-        "Dest": "NAP",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-NQZ",
-        "Terminal": "T1",
-        "Dest": "NQZ",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-OTP",
-        "Terminal": "T1",
-        "Dest": "OTP",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-RUH",
-        "Terminal": "T1",
-        "Dest": "RUH",
-        "Quota": 2
+        "Quota": 5
     },
     {
         "Year": "2023",
@@ -438,39 +110,7 @@
         "Terminal_Dest": "T1-SAW",
         "Terminal": "T1",
         "Dest": "SAW",
-        "Quota": 4
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-SCT",
-        "Terminal": "T1",
-        "Dest": "SCT",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-SHJ",
-        "Terminal": "T1",
-        "Dest": "SHJ",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-SJJ",
-        "Terminal": "T1",
-        "Dest": "SJJ",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-SKD",
-        "Terminal": "T1",
-        "Dest": "SKD",
-        "Quota": 0
+        "Quota": 5
     },
     {
         "Year": "2023",
@@ -478,39 +118,7 @@
         "Terminal_Dest": "T1-SLL",
         "Terminal": "T1",
         "Dest": "SLL",
-        "Quota": 4
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-SOF",
-        "Terminal": "T1",
-        "Dest": "SOF",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-TAS",
-        "Terminal": "T1",
-        "Dest": "TAS",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-TBS",
-        "Terminal": "T1",
-        "Dest": "TBS",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-TIA",
-        "Terminal": "T1",
-        "Dest": "TIA",
-        "Quota": 0
+        "Quota": 5
     },
     {
         "Year": "2023",
@@ -518,7 +126,7 @@
         "Terminal_Dest": "T1-TLV",
         "Terminal": "T1",
         "Dest": "TLV",
-        "Quota": 4
+        "Quota": 5
     },
     {
         "Year": "2023",
@@ -526,23 +134,7 @@
         "Terminal_Dest": "T1-TRV",
         "Terminal": "T1",
         "Dest": "TRV",
-        "Quota": 8
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-TRZ",
-        "Terminal": "T1",
-        "Dest": "TRZ",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T1-VIE",
-        "Terminal": "T1",
-        "Dest": "VIE",
-        "Quota": 2
+        "Quota": 12
     },
     {
         "Year": "2023",
@@ -575,14 +167,6 @@
         "Terminal": "T3",
         "Dest": "ATH",
         "Quota": 4
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T3-AUH",
-        "Terminal": "T3",
-        "Dest": "AUH",
-        "Quota": 0
     },
     {
         "Year": "2023",
@@ -651,14 +235,6 @@
     {
         "Year": "2023",
         "Month": "05",
-        "Terminal_Dest": "T3-CAN",
-        "Terminal": "T3",
-        "Dest": "CAN",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
         "Terminal_Dest": "T3-CCU",
         "Terminal": "T3",
         "Dest": "CCU",
@@ -687,14 +263,6 @@
         "Terminal": "T3",
         "Dest": "CMB",
         "Quota": 3
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T3-CMN",
-        "Terminal": "T3",
-        "Dest": "CMN",
-        "Quota": 2
     },
     {
         "Year": "2023",
@@ -827,14 +395,6 @@
     {
         "Year": "2023",
         "Month": "05",
-        "Terminal_Dest": "T3-JNB",
-        "Terminal": "T3",
-        "Dest": "JNB",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
         "Terminal_Dest": "T3-KHI",
         "Terminal": "T3",
         "Dest": "KHI",
@@ -963,42 +523,10 @@
     {
         "Year": "2023",
         "Month": "05",
-        "Terminal_Dest": "T3-PKX",
-        "Terminal": "T3",
-        "Dest": "PKX",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T3-PVG",
-        "Terminal": "T3",
-        "Dest": "PVG",
-        "Quota": 2
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T3-RKT",
-        "Terminal": "T3",
-        "Dest": "RKT",
-        "Quota": 0
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
         "Terminal_Dest": "T3-RUH",
         "Terminal": "T3",
         "Dest": "RUH",
         "Quota": 11
-    },
-    {
-        "Year": "2023",
-        "Month": "05",
-        "Terminal_Dest": "T3-SEZ",
-        "Terminal": "T3",
-        "Dest": "SEZ",
-        "Quota": 2
     },
     {
         "Year": "2023",
@@ -1055,7 +583,7 @@
         "Terminal": "T3",
         "Dest": "ZRH",
         "Quota": 4
-    }   
+    }
 ,{
         "Year": "2023",
         "Month": "04",
