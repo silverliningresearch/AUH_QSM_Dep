@@ -124,11 +124,18 @@ function prepareInterviewData() {
    //get quota data
    quota_data = [];
    quota_data.length = 0;
+
+   var t1_quota_tmp = 0;
+   var t3_quota_tmp = 0;
+   
    for (i = 0; i < quota_data_temp.length; i++) {
      var quota_month =  quota_data_temp[i].Month + "-"  + quota_data_temp[i].Year; 
      if ((quota_month== currentMonth) && (quota_data_temp[i].Quota>0))
      {
        quota_data.push(quota_data_temp[i]);
+       
+       if (quota_data_temp[i].Terminal == "T1") t1_quota_tmp = t1_quota_tmp + quota_data_temp[i].Quota;
+       if (quota_data_temp[i].Terminal == "T3") t3_quota_tmp = t3_quota_tmp + quota_data_temp[i].Quota;
      }
    }
 
@@ -202,6 +209,7 @@ function prepareInterviewData() {
   daily_plan_data = [];
   daily_plan_data.length = 0;
   
+
   for (i = 0; i < today_flight_list.length; i++) {
     let flight = today_flight_list[i];
     for (j = 0; j < quota_data.length; j++) {
@@ -212,7 +220,10 @@ function prepareInterviewData() {
         daily_plan_data.push(flight);
        }
     }
+  
   }
-  //console.log("daily_plan_data: ", daily_plan_data);
+  
+  console.log("t1 quota: ", t1_quota_tmp);
+  console.log("t3 quota: ", t3_quota_tmp);
 
 }
