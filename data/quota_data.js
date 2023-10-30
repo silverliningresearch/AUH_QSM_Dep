@@ -4563,7 +4563,7 @@
         "Terminal_Dest": "T3-YYZ",
         "Terminal": "T3",
         "Dest": "YYZ",
-        "Quota": 4
+        "Quota": 3
     },
     {
         "Year": "2023",
