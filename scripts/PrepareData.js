@@ -23,6 +23,8 @@ var T1_completed;
 var T3_quota = 333;
 var T3_completed;
 
+var TA_quota = 500;
+var TA_completed = 0;
 /************************************/
 function initCurrentTimeVars() {
   var today = new Date();
@@ -127,6 +129,7 @@ function prepareInterviewData() {
 
    var t1_quota_tmp = 0;
    var t3_quota_tmp = 0;
+   var tA_quota_tmp = 0;
    
    for (i = 0; i < quota_data_temp.length; i++) {
      var quota_month =  quota_data_temp[i].Month + "-"  + quota_data_temp[i].Year; 
@@ -136,6 +139,7 @@ function prepareInterviewData() {
        
        if (quota_data_temp[i].Terminal == "T1") t1_quota_tmp = t1_quota_tmp + quota_data_temp[i].Quota;
        if (quota_data_temp[i].Terminal == "T3") t3_quota_tmp = t3_quota_tmp + quota_data_temp[i].Quota;
+       if (quota_data_temp[i].Terminal == "TA") tA_quota_tmp = t3_quota_tmp + quota_data_temp[i].Quota;
      }
    }
 
@@ -225,5 +229,6 @@ function prepareInterviewData() {
   
   console.log("t1 quota: ", t1_quota_tmp);
   console.log("t3 quota: ", t3_quota_tmp);
+  console.log("tA quota: ", tA_quota_tmp);
 
 }

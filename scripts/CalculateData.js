@@ -33,6 +33,11 @@ function CalculateAirportAirLineReport() {
     {
       T3_completed++;
     }
+    else if (interview_data[i].Terminal == "TA")
+    {
+      TA_completed++;
+    }
+
   }
   console.log("not_in_quota_list: ", not_in_quota_list);
 

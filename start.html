@@ -160,9 +160,11 @@
         overall_arrival_status += " - Total completed: " + total_arrival_completed;
         overall_arrival_status +=  " (" + total_arrival_completed_percent +  "%)";
         document.getElementById("overall_arrival_status").innerHTML =overall_arrival_status;
-
-        var terminal_arrival_status = "Terminal 1: " + T1_completed_arr + "/83 - Terminal 3: " + T3_completed_arr + "/167";
-        document.getElementById("terminal_arrival_status").innerHTML =terminal_arrival_status;
+        
+        if ((T1_completed_arr>0) || (T3_completed_arr>0)) {
+          var terminal_arrival_status = "Terminal 1: " + T1_completed_arr + "/83 - Terminal 3: " + T3_completed_arr + "/167";
+          document.getElementById("terminal_arrival_status").innerHTML =terminal_arrival_status;
+        }
 
         //overall_status
         var overall_status = "QMS Departures: " +  "Total quota: " + total_quota;
@@ -170,8 +172,10 @@
         overall_status += " (" + total_completed_percent + "%)";
         document.getElementById("overall_status").innerHTML =overall_status;
 
-        var terminal_status = "Terminal 1: " + T1_completed + "/167 - Terminal 3: " + T3_completed + "/333";
-        document.getElementById("terminal_status").innerHTML =terminal_status;
+        if ((T1_completed>0) || (T3_completed>0)) {
+          var terminal_status = "Terminal 1: " + T1_completed + "/167 - Terminal 3: " + T3_completed + "/333";
+          document.getElementById("terminal_status").innerHTML =terminal_status;
+        }
 
       }
     

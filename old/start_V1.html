@@ -1,6 +1,6 @@
 <html>
     <head>
-		<title>Daily Plan - ADAC QSM Departures Survey</title>
+		<title>ADAC QSM Departures Survey</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   
 		<script src="data/quota_data.js"></script>
@@ -48,7 +48,8 @@
       .red {background-color: #f44336;;} /* Red */
       .blue {background-color: #110c71;} /* Blue */ 
       .yellow {background-color: rgba(255,85,51,1);;} /* Yellow */ 
-
+      
+      h1 {text-align: center;}
     </style>
 
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -160,20 +161,18 @@
         overall_arrival_status +=  " (" + total_arrival_completed_percent +  "%)";
         document.getElementById("overall_arrival_status").innerHTML =overall_arrival_status;
 
-        if ((T1_completed_arr>0) || (T3_completed_arr>0)) {
-          var terminal_arrival_status = "Terminal 1: " + T1_completed_arr + "/83 - Terminal 3: " + T3_completed_arr + "/167";
-          document.getElementById("terminal_arrival_status").innerHTML =terminal_arrival_status;
-        }
+        var terminal_arrival_status = "Terminal 1: " + T1_completed_arr + "/83 - Terminal 3: " + T3_completed_arr + "/167";
+        document.getElementById("terminal_arrival_status").innerHTML =terminal_arrival_status;
+
         //overall_status
         var overall_status = "QMS Departures: " +  "Total quota: " + total_quota;
         overall_status += " - Total completed: " + total_completed;
         overall_status += " (" + total_completed_percent + "%)";
         document.getElementById("overall_status").innerHTML =overall_status;
 
-        if ((T1_completed>0) || (T3_completed>0)) {
-          var terminal_status = "Terminal 1: " + T1_completed + "/167 - Terminal 3: " + T3_completed + "/333";
-          document.getElementById("terminal_status").innerHTML =terminal_status;
-        }
+        var terminal_status = "Terminal 1: " + T1_completed + "/167 - Terminal 3: " + T3_completed + "/333";
+        document.getElementById("terminal_status").innerHTML =terminal_status;
+
       }
     
       function start_new_interview() {
@@ -190,12 +189,38 @@
       document.getElementById('inputFlightCodeID').value = "";
       window.location.href = url;
     }
+
+      window.addEventListener('load', function () {
+      load_flight_list();
+      document.getElementById('inputFlightCodeID').value = "";
+    });
+
+
     </script>
   </head>
   <body>
    
-    <h1>Daily Plan - ADAC QSM Departures Survey</h1>
+  </br></br></br>
 
+    <div>
+      <input list="flightDropBoxList" 
+        onchange="select_flight()"  
+        onkeyup="update_drop_box_list()" 
+        placeholder="Please key in flight number:"
+        name="inputFlightCodeID" id="inputFlightCodeID" >
+      <datalist id="flightDropBoxList">
+    </div>  
+  
+    <div>
+      </br></br></br> </br></br>
+      <button onclick="start_new_interview()" class="button blue">Start survey</button>
+      </br></br>
+    </div>
+
+    
+    <div style="background-color:#065c7c">
+      </br>
+    </div>
     <h5 id="download_time"></h5>
     <h4 id="overall_arrival_status"></h4>
     <h5 id="terminal_arrival_status"></h4>

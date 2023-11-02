@@ -7,6 +7,9 @@ var T1_completed_arr;
 var T3_quota_arr = 167;
 var T3_completed_arr;
 
+var TA_quota_arr = 250;
+var TA_completed_arr;
+
 /************************************/
 function CalculateArrival() {
   var interview_data_temp  = JSON.parse(interview_data_arr_raw);
@@ -31,6 +34,11 @@ function CalculateArrival() {
       {
         T3_completed_arr++;
       }
+      else if (interview.Terminal == "TA")
+      {
+        TA_completed_arr++;
+      }
+
     }
   }
   total_arrival_completed_percent = (100*(total_arrival_completed/total_arrival_quota)).toFixed(0);   
