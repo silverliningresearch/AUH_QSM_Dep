@@ -165,7 +165,7 @@ function prepareInterviewData() {
         var InterviewEndDate = '"InterviewEndDate"' + ":" + '"' +  interview["InterviewEndDate"]  + '", ';
         var Terminal = '"Terminal"' + ":" + '"' +  interview["Terminal"];
 
-        if(currentMonth == '11-2023') {
+        if ((currentMonth == '11-2023') || ((currentMonth == '12-2023')))  {
           Terminal = '"Terminal"' + ":" + '"' +  "TA";
           Terminal_Dest = '"Terminal_Dest"' + ":" + '"' + "TA" +"-" + interview["Dest"] + '", ';
         }
