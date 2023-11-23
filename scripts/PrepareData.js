@@ -139,7 +139,7 @@ function prepareInterviewData() {
        
        if (quota_data_temp[i].Terminal == "T1") t1_quota_tmp = t1_quota_tmp + quota_data_temp[i].Quota;
        if (quota_data_temp[i].Terminal == "T3") t3_quota_tmp = t3_quota_tmp + quota_data_temp[i].Quota;
-       if (quota_data_temp[i].Terminal == "TA") tA_quota_tmp = t3_quota_tmp + quota_data_temp[i].Quota;
+       if (quota_data_temp[i].Terminal == "TA") tA_quota_tmp = tA_quota_tmp + quota_data_temp[i].Quota;
      }
    }
 
@@ -163,7 +163,13 @@ function prepareInterviewData() {
 
         var Terminal_Dest = '"Terminal_Dest"' + ":" + '"' + interview["Terminal"] +"-" + interview["Dest"] + '", ';
         var InterviewEndDate = '"InterviewEndDate"' + ":" + '"' +  interview["InterviewEndDate"]  + '", ';
-        var Terminal = '"Terminal"' + ":" + '"' +  interview["Terminal"] ;
+        var Terminal = '"Terminal"' + ":" + '"' +  interview["Terminal"];
+
+        if(currentMonth == '11-2023') {
+          Terminal = '"Terminal"' + ":" + '"' +  "TA";
+          Terminal_Dest = '"Terminal_Dest"' + ":" + '"' + "TA" +"-" + interview["Dest"] + '", ';
+        }
+
         var str = '{' + Terminal_Dest + InterviewEndDate + Terminal +'"}';
 
         if (isvalid_id(interview["InterviewId"])) //check if valid
@@ -227,8 +233,8 @@ function prepareInterviewData() {
   
   }
   
-  console.log("t1 quota: ", t1_quota_tmp);
-  console.log("t3 quota: ", t3_quota_tmp);
-  console.log("tA quota: ", tA_quota_tmp);
+  // console.log("t1 quota: ", t1_quota_tmp);
+  // console.log("t3 quota: ", t3_quota_tmp);
+  // console.log("tA quota: ", tA_quota_tmp);
 
 }
