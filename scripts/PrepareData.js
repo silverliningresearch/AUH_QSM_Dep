@@ -153,6 +153,7 @@ function prepareInterviewData() {
     var interview = interview_data_full[i];
 
     var interview_month = interview["InterviewEndDate"].substring(5,7);//"2023-04-03 06:18:18"
+    var interview_year = interview["InterviewEndDate"].substring(0,4);//"2023-04-03 06:18:18"
     
     if ((interview.InterviewState == "Complete") 
         && (isCurrentMonth(interview.InterviewEndDate))
@@ -165,7 +166,9 @@ function prepareInterviewData() {
         var InterviewEndDate = '"InterviewEndDate"' + ":" + '"' +  interview["InterviewEndDate"]  + '", ';
         var Terminal = '"Terminal"' + ":" + '"' +  interview["Terminal"];
 
-        if ((currentMonth == '11-2023') || ((currentMonth == '12-2023')))  {
+        if ((currentMonth == '11-2023')
+            || (currentMonth =='12-2023') 
+            || (currentMonth.substring(3,7) == '2024'))  {
           Terminal = '"Terminal"' + ":" + '"' +  "TA";
           Terminal_Dest = '"Terminal_Dest"' + ":" + '"' + "TA" +"-" + interview["Dest"] + '", ';
         }
